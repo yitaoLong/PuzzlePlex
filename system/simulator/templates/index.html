@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Game Simulator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="tab-bar-container">
+            <div id="tab-bar"></div>
+        </div>
+
+        <div id="content-wrapper">
+            <div id="chat-wrapper">
+                <div id="chat-container"></div>
+            </div>
+
+            <div id="right-sidebar">
+                <div id="puzzle-container">
+                    <h2>Puzzle</h2>
+                    <div id="current-puzzle"></div>
+                </div>
+
+                <div id="stats-wrapper">
+                    <h2>Results</h2>
+                    <div id="stats-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>

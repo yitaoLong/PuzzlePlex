@@ -1,0 +1,84 @@
+from model.custom.tidy_tower import TidyTowerCustomStrategy
+from puzzle.single_deterministic.tidy_tower import TidyTowerPuzzle
+from model.llm.tidy_tower import TidyTowerLLMStrategy
+
+from model.custom.card_nim import CardNimCustomStrategy
+from puzzle.adversarial_deterministic.card_nim import CardNimPuzzle
+from model.llm.card_nim import CardNimLLMStrategy
+
+from model.custom.optimal_touring import OptimalTouringCustomStrategy
+from puzzle.single_deterministic.optimal_touring import OptimalTouringPuzzle
+from model.llm.optimal_touring import OptimalTouringLLMStrategy
+
+from model.custom.ruby_risks import RubyRisksCustomStrategy
+from puzzle.single_stochastic.ruby_risks import RubyRisksPuzzle
+from model.llm.ruby_risks import RubyRisksLLMStrategy
+
+from model.custom.sudokill import SudoKillCustomStrategy
+from puzzle.adversarial_deterministic.sudokill import SudoKillPuzzle
+from model.llm.sudokill import SudoKillLLMStrategy
+
+from model.custom.count_maximal_cocktails import CountMaximalCocktailsCustomStrategy
+from puzzle.single_deterministic.count_maximal_cocktails import CountMaximalCocktailsPuzzle
+from model.llm.count_maximal_cocktails import CountMaximalCocktailsLLMStrategy
+
+from model.custom.max_maximal_cocktails import MaxMaximalCocktailsCustomStrategy
+from puzzle.adversarial_deterministic.max_maximal_cocktails import MaxMaximalCocktailsPuzzle
+from model.llm.max_maximal_cocktails import MaxMaximalCocktailsLLMStrategy
+
+from model.custom.exclusivity_particles import ExclusivityParticlesCustomStrategy
+from puzzle.adversarial_deterministic.exclusivity_particles import ExclusivityParticlesPuzzle
+from model.llm.exclusivity_particles import ExclusivityParticlesLLMStrategy
+
+from model.custom.exclusivity_probes import ExclusivityProbesCustomStrategy
+from puzzle.single_stochastic.exclusivity_probes import ExclusivityProbesPuzzle
+from model.llm.exclusivity_probes import ExclusivityProbesLLMStrategy
+
+from model.custom.beat_or_bomb_sto import BeatOrBombStoCustomStrategy
+from puzzle.adversarial_stochastic.beat_or_bomb_sto import BeatOrBombStoPuzzle
+from model.llm.beat_or_bomb_sto import BeatOrBombStoLLMStrategy
+
+from model.custom.max_target import MaxTargetCustomStrategy
+from puzzle.single_stochastic.max_target import MaxTargetPuzzle
+from model.llm.max_target import MaxTargetLLMStrategy
+
+from model.custom.larger_target import LargerTargetCustomStrategy
+from puzzle.adversarial_stochastic.larger_target import LargerTargetPuzzle
+from model.llm.larger_target import LargerTargetLLMStrategy
+
+from model.custom.superply import SuperplyCustomStrategy
+from puzzle.adversarial_deterministic.superply import SuperplyPuzzle
+from model.llm.superply import SuperplyLLMStrategy
+
+from model.custom.sudokill_m import SudoKillMCustomStrategy
+from puzzle.adversarial_deterministic.sudokill_m import SudoKillMPuzzle
+from model.llm.sudokill_m import SudoKillMLLMStrategy
+
+from model.custom.superply_m import SuperplyMCustomStrategy
+from puzzle.adversarial_deterministic.superply_m import SuperplyMPuzzle
+from model.llm.superply_m import SuperplyMLLMStrategy
+
+
+single_det_text_puzzle_list = [TidyTowerPuzzle(), OptimalTouringPuzzle(), CountMaximalCocktailsPuzzle()]
+single_sto_text_puzzle_list = [RubyRisksPuzzle(), ExclusivityProbesPuzzle(), MaxTargetPuzzle()]
+two_det_text_puzzle_list = [CardNimPuzzle(), SudoKillPuzzle(), MaxMaximalCocktailsPuzzle(), ExclusivityParticlesPuzzle(), SuperplyPuzzle()]
+two_sto_text_puzzle_list = [BeatOrBombStoPuzzle(), LargerTargetPuzzle()]
+two_det_image_puzzle_list = [SudoKillMPuzzle(), SuperplyMPuzzle()]
+
+puzzle_list = single_det_text_puzzle_list + single_sto_text_puzzle_list + two_det_text_puzzle_list + two_sto_text_puzzle_list + two_det_image_puzzle_list
+
+single_det_text_puzzle_custom_list = [TidyTowerCustomStrategy, OptimalTouringCustomStrategy, CountMaximalCocktailsCustomStrategy]
+single_sto_text_puzzle_custom_list = [RubyRisksCustomStrategy, ExclusivityProbesCustomStrategy, MaxTargetCustomStrategy]
+two_det_text_puzzle_custom_list = [CardNimCustomStrategy, SudoKillCustomStrategy, MaxMaximalCocktailsCustomStrategy, ExclusivityParticlesCustomStrategy, SuperplyCustomStrategy]
+two_sto_text_puzzle_custom_list = [BeatOrBombStoCustomStrategy, LargerTargetCustomStrategy]
+two_det_image_puzzle_custom_list = [SudoKillMCustomStrategy, SuperplyMCustomStrategy]
+
+puzzle_custom_list = single_det_text_puzzle_custom_list + single_sto_text_puzzle_custom_list + two_det_text_puzzle_custom_list + two_sto_text_puzzle_custom_list + two_det_image_puzzle_custom_list
+
+single_det_text_puzzle_llm_list = [TidyTowerLLMStrategy, OptimalTouringLLMStrategy, CountMaximalCocktailsLLMStrategy]
+single_sto_text_puzzle_llm_list = [RubyRisksLLMStrategy, ExclusivityProbesLLMStrategy, MaxTargetLLMStrategy]
+two_det_text_puzzle_llm_list = [CardNimLLMStrategy, SudoKillLLMStrategy, MaxMaximalCocktailsLLMStrategy, ExclusivityParticlesLLMStrategy, SuperplyLLMStrategy]
+two_sto_text_puzzle_llm_list = [BeatOrBombStoLLMStrategy, LargerTargetLLMStrategy]
+two_det_image_puzzle_llm_list = [SudoKillMLLMStrategy, SuperplyMLLMStrategy]
+
+puzzle_llm_list = single_det_text_puzzle_llm_list + single_sto_text_puzzle_llm_list + two_det_text_puzzle_llm_list + two_sto_text_puzzle_llm_list + two_det_image_puzzle_llm_list
